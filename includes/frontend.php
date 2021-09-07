@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 // Show whatsapp chat button in frontend
 function scb_show_whatsapp_button() {
     $button_status = intval(get_option('scb_button_status'));
-    if ($button_status === 1){
+    if ($button_status === 1 && !is_admin()){
         // Initialize variables
         $whatsapp_number = get_option('scb_whatsapp_number');
         $whatsapp_chat_text = get_option('scb_whatsapp_chat_text');
@@ -17,11 +17,16 @@ function scb_show_whatsapp_button() {
         $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
         $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
         $whatsapp_chat_text = urlencode($whatsapp_chat_text);
+        $device_detection = (wp_is_mobile())?'mobile_and_tablet':'desktop';
+        $devices_url = array(
+            'mobile_and_tablet' => 'whatsapp://send',
+            'desktop' => 'https://api.whatsapp.com/send/'
+        );
         $chat_args = array(
             'phone' =>  $whatsapp_number,
             'text'  =>  $whatsapp_chat_text
         );
-        $chat_url = add_query_arg($chat_args, "whatsapp://send"); ?>
+        $chat_url = add_query_arg($chat_args, $devices_url[$device_detection]); ?>
 
         <!-- BEGIN Simple Chat Button Plugin -->
         <style>
