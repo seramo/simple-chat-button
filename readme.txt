@@ -4,7 +4,7 @@ Donate link: https://seramo.ir
 Tags: WhatsApp Sticky Button, Simple WhatsApp Chat Button, Chat Button, WhatsApp Button, Whatsapp Chat, Whatsapp Business, Simple, WhatsApp, Chat, Button
 Requires at least: 3.7
 Tested up to: 5.8
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -23,7 +23,7 @@ Add your 'WhatsApp' or 'WhatsApp Business' Number. And let your website visitors
 
 **Mobile:**  Navigates to WhatsApp Mobile App.
 
-**Desktop:** Navigates to WhatsApp Desktop App.
+**Desktop:** Navigates to WhatsApp Web.
 
 = Prefilled Message =
 

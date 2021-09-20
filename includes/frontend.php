@@ -20,7 +20,7 @@ function scb_show_whatsapp_button() {
         $device_detection = (wp_is_mobile())?'mobile_and_tablet':'desktop';
         $devices_url = array(
             'mobile_and_tablet' => 'whatsapp://send',
-            'desktop' => 'https://api.whatsapp.com/send/'
+            'desktop' => 'https://web.whatsapp.com/send'
         );
         $chat_args = array(
             'phone' =>  $whatsapp_number,
