@@ -103,6 +103,9 @@ If you like this plugin and is useful for you, please support us by giving **5 s
 
 == Changelog ==
 
+= 1.2 =
+* Fix: chat link bug in desktop mode (for iranian users)
+
 = 1.1 =
 * Fix: chat link bug in desktop mode
 * Fix: display chat button in widgets editor
