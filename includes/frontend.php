@@ -12,7 +12,9 @@ function scb_show_whatsapp_button() {
         $whatsapp_number = get_option('scb_whatsapp_number');
         $whatsapp_chat_text = get_option('scb_whatsapp_chat_text');
         $button_text = get_option('scb_button_text');
+        $button_target = get_option('scb_button_target');
 		$button_position = get_option('scb_button_position');
+        $button_z_index = intval(get_option('scb_button_z_index'));
         $desktop_bottom_margin = intval(get_option('scb_desktop_bottom_margin'));
         $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
         $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
@@ -34,7 +36,7 @@ function scb_show_whatsapp_button() {
                 position: fixed;
                 bottom: <?php echo esc_attr($desktop_bottom_margin); ?>px;
                 <?php echo esc_attr($button_position); ?>: 20px;
-                z-index: 999999999;
+                z-index: <?php echo !empty($button_z_index)?esc_attr($button_z_index):'999999999'; ?>;
             }
             #simple-chat-button--button {
                 display: block;
@@ -132,7 +134,7 @@ function scb_show_whatsapp_button() {
             }
         </style>
         <div id="simple-chat-button--container">
-            <a id="simple-chat-button--button" href="<?php echo esc_attr($chat_url); ?>"></a>
+            <a id="simple-chat-button--button" href="<?php echo esc_attr($chat_url); ?>" target="<?php echo esc_attr($button_target); ?>"></a>
             <span id="simple-chat-button--text"><?php echo esc_attr($button_text); ?></span>
         </div>
         <!-- END Simple Chat Button Plugin -->

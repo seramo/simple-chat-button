@@ -1,0 +1,7 @@
+<wpml-config>
+    <admin-texts>
+        <key name="scb_whatsapp_number" />
+        <key name="scb_whatsapp_chat_text" />
+        <key name="scb_button_text" />
+    </admin-texts>
+</wpml-config>

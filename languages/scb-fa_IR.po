@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Whatsapp Chat Button\n"
-"POT-Creation-Date: 2021-08-20 21:37+0430\n"
-"PO-Revision-Date: 2021-09-03 11:37+0430\n"
+"POT-Creation-Date: 2022-05-16 09:04+0430\n"
+"PO-Revision-Date: 2022-05-16 09:04+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -21,88 +21,104 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/settings-page.php:15
+#: includes/settings-page.php:30
 msgid "Whatsapp Settings"
 msgstr "تنظیمات واتساپ"
 
-#: includes/settings-page.php:16
+#: includes/settings-page.php:31
 msgid "Button Settings"
 msgstr "تنظیمات دکمه"
 
-#: includes/settings-page.php:24
+#: includes/settings-page.php:39
 msgid "Whatsapp number"
 msgstr "شماره واتساپ"
 
-#: includes/settings-page.php:26
+#: includes/settings-page.php:41
 msgid "15551234567"
 msgstr "989151234567"
 
-#: includes/settings-page.php:27
+#: includes/settings-page.php:42
 msgid ""
 "Enter Whatsapp number with country code (without any plus, preceding zero, "
 "hyphen, brackets, space)."
 msgstr ""
-"شماره واتساپ را با کد کشور وارد کنید (بدون مثبت، صفرهای اول، خط تیره، "
-"براکت و فاصله)."
+"شماره واتساپ را با کد کشور وارد کنید (بدون مثبت، صفرهای اول، خط تیره، براکت "
+"و فاصله)."
 
-#: includes/settings-page.php:31
+#: includes/settings-page.php:46
 msgid "Whatsapp chat text"
 msgstr "متن چت واتساپ"
 
-#: includes/settings-page.php:31 includes/settings-page.php:45
+#: includes/settings-page.php:46 includes/settings-page.php:60
 msgid "(optional)"
 msgstr "(اختیاری)"
 
-#: includes/settings-page.php:33 simple-chat-button.php:84
+#: includes/settings-page.php:48 simple-chat-button.php:86
 msgid "Hello"
 msgstr "سلام"
 
-#: includes/settings-page.php:38
+#: includes/settings-page.php:53
 msgid "Button status"
 msgstr "وضعیت دکمه"
 
-#: includes/settings-page.php:41
+#: includes/settings-page.php:56
 msgid "Enabled"
 msgstr "فعال کردن"
 
-#: includes/settings-page.php:45
+#: includes/settings-page.php:60
 msgid "Button text"
 msgstr "متن دکمه"
 
-#: includes/settings-page.php:47 simple-chat-button.php:86
+#: includes/settings-page.php:62 simple-chat-button.php:88
 msgid "Need Help?"
 msgstr "سوالی ندارید؟"
 
-#: includes/settings-page.php:48
+#: includes/settings-page.php:63
 msgid "Leave this field empty to only show an icon."
 msgstr ""
 "در صورتی که می خواهید متن دکمه نمایش داده نشود، این قسمت را خالی بگذارید."
 
-#: includes/settings-page.php:52
+#: includes/settings-page.php:67
+msgid "Open link in"
+msgstr "نوع باز کردن لینک"
+
+#: includes/settings-page.php:70
+msgid "New Tab"
+msgstr "تب جدید"
+
+#: includes/settings-page.php:71
+msgid "Current Tab"
+msgstr "تب فعلی"
+
+#: includes/settings-page.php:76
 msgid "Position"
 msgstr "موقعیت"
 
-#: includes/settings-page.php:55
+#: includes/settings-page.php:79
 msgid "Bottom Right"
 msgstr "پایین راست"
 
-#: includes/settings-page.php:56
+#: includes/settings-page.php:80
 msgid "Bottom Left"
 msgstr "پایین چپ"
 
-#: includes/settings-page.php:61
+#: includes/settings-page.php:85
+msgid "Z-index"
+msgstr "z-index"
+
+#: includes/settings-page.php:91
 msgid "Bottom margin"
 msgstr "فاصله از پایین صفحه"
 
-#: includes/settings-page.php:63
+#: includes/settings-page.php:93
 msgid "px (in Desktop)"
 msgstr "پیکسل (در دسکتاپ)"
 
-#: includes/settings-page.php:69
+#: includes/settings-page.php:99
 msgid "px (in Tablet)"
 msgstr "پیکسل (در تبلت)"
 
-#: includes/settings-page.php:75
+#: includes/settings-page.php:105
 msgid "px (in Mobile)"
 msgstr "پیکسل (در موبایل)"
 
@@ -111,11 +127,11 @@ msgstr "پیکسل (در موبایل)"
 msgid "Simple Chat Button"
 msgstr "دکمه ساده چت واتساپ"
 
-#: simple-chat-button.php:105
+#: simple-chat-button.php:108
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: simple-chat-button.php:106
+#: simple-chat-button.php:109
 msgid "Website"
 msgstr "وبسایت سازنده"
 

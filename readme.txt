@@ -3,8 +3,8 @@ Contributors: seramo
 Donate link: https://seramo.ir
 Tags: WhatsApp Sticky Button, Simple WhatsApp Chat Button, Chat Button, WhatsApp Button, Whatsapp Chat, Whatsapp Business, Simple, WhatsApp, Chat, Button
 Requires at least: 3.7
-Tested up to: 5.8
-Stable tag: 1.2.0
+Tested up to: 5.9
+Stable tag: 1.3.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -89,7 +89,7 @@ Don't use: +001-(555)1234567
 
 = Give Support =
 
-If you like this plugin and is useful for you, please support us by giving **5 star** rating.
+If you like this plugin and is useful for you, please support us by giving [5 star rating](https://wordpress.org/support/plugin/simple-chat-button/reviews/#new-post) .
 
 
 == Screenshots ==
@@ -102,6 +102,12 @@ If you like this plugin and is useful for you, please support us by giving **5 s
 6. screenshot-6.png - Whatsapp Button without text box (Bottom Right position)
 
 == Changelog ==
+
+= 1.3 =
+* Added: WPML config to translate variables and whatsapp number
+* Added: _blank and _self target for whatsapp link
+* Added: z-index for controls the vertical stacking order of elements that overlap
+* Fixed: issue in margin inputs
 
 = 1.2 =
 * Fix: chat link bug in desktop mode (for iranian users)

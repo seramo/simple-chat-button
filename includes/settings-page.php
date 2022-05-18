@@ -16,7 +16,9 @@ $whatsapp_number = get_option('scb_whatsapp_number');
 $whatsapp_chat_text = get_option('scb_whatsapp_chat_text');
 $button_status = intval(get_option('scb_button_status'));
 $button_text = get_option('scb_button_text');
+$button_target = get_option('scb_button_target');
 $button_position = get_option('scb_button_position');
+$button_z_index = get_option('scb_button_z_index');
 $desktop_bottom_margin = intval(get_option('scb_desktop_bottom_margin'));
 $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
 $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
@@ -62,6 +64,15 @@ $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
                         </td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php echo esc_html__('Open link in', 'scb'); ?> :</th>
+                        <td>
+                            <select name="scb_button_target" id="scb_button_target" >
+                                <option <?php selected(esc_attr($button_target), '_blank'); ?> value="_blank"><?php echo esc_html__('New Tab', 'scb'); ?></option>
+                                <option <?php selected(esc_attr($button_target), '_self'); ?> value="_self"><?php echo esc_html__('Current Tab', 'scb'); ?></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
                         <th scope="row"><?php echo esc_html__('Position', 'scb'); ?> :</th>
                         <td>
                             <select name="scb_button_position" id="scb_button_position" >
@@ -71,21 +82,27 @@ $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
                         </td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php echo esc_html__('Z-index', 'scb'); ?> :</th>
+                        <td>
+                            <input type="number" name="scb_button_z_index" id="scb_button_z_index" min="0" max="999999999" step="1" value="<?php echo esc_attr($button_z_index) ?>" placeholder="100"/>
+                        </td>
+                    </tr>
+                    <tr>
                         <th scope="row"><?php echo esc_html__('Bottom margin', 'scb'); ?> :</th>
                         <td>
-                           <input type="number" name="scb_desktop_bottom_margin" id="scb_desktop_bottom_margin" min="0" max="100" step="5" value="<?php echo esc_attr($desktop_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Desktop)', 'scb'); ?> </span>
+                           <input type="number" name="scb_desktop_bottom_margin" id="scb_desktop_bottom_margin" min="0" max="100" step="1" value="<?php echo esc_attr($desktop_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Desktop)', 'scb'); ?> </span>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row"</th>
                         <td>
-                            <input type="number" name="scb_tablet_bottom_margin" id="scb_tablet_bottom_margin" min="0" max="100" step="5" value="<?php echo esc_attr($tablet_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Tablet)', 'scb'); ?> </span>
+                            <input type="number" name="scb_tablet_bottom_margin" id="scb_tablet_bottom_margin" min="0" max="100" step="1" value="<?php echo esc_attr($tablet_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Tablet)', 'scb'); ?> </span>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td>
-                            <input type="number" name="scb_mobile_bottom_margin" id="scb_mobile_bottom_margin" min="0" max="100" step="5" value="<?php echo esc_attr($mobile_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Mobile)', 'scb'); ?> </span>
+                            <input type="number" name="scb_mobile_bottom_margin" id="scb_mobile_bottom_margin" min="0" max="100" step="1" value="<?php echo esc_attr($mobile_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Mobile)', 'scb'); ?> </span>
                         </td>
                     </tr>
                 <?php } ?>

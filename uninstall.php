@@ -10,7 +10,9 @@ $scb_options = array(
 	'scb_whatsapp_chat_text',
     'scb_button_status',
 	'scb_button_text',
+    'scb_button_target',
 	'scb_button_position',
+    'scb_button_z_index',
 	'scb_desktop_bottom_margin',
 	'scb_tablet_bottom_margin',
 	'scb_mobile_bottom_margin'
