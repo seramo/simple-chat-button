@@ -4,7 +4,7 @@
  * Description: Adds a beautiful WhatsApp Sticky Button on the WordPress frontend.
  * Author:      Rasoul Mousavian
  * Author URI:  https://seramo.ir
- * Version:     1.3.0
+ * Version:     1.4.0
  * License:     GPLv2
  * Text Domain: scb
  * Domain Path: /languages/
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('SCB_VERSION', '1.3.0');
+define('SCB_VERSION', '1.4.0');
 define('SCB_NAME', plugin_basename(__FILE__));
 define('SCB_DIR', plugin_dir_path(__FILE__));
 define('SCB_URI', plugin_dir_url(__FILE__));
@@ -37,6 +37,12 @@ if (!class_exists('SCB_Main')) {
 
             // Register settings
             add_action('admin_init', array($this, 'scb_register_settings'));
+
+            // Add custom meta box
+            add_action('add_meta_boxes', array($this,'scb_add_custom_meta_box'));
+
+            // Add save custom meta box data
+            add_action('save_post', array($this, 'scb_save_post_data'));
 
             // Add settings link
             add_filter('plugin_action_links_' . SCB_NAME, array($this, 'scb_add_settings_link'));
@@ -101,6 +107,72 @@ if (!class_exists('SCB_Main')) {
             }
             // Include settings page
             include SCB_INC . 'settings-page.php';
+        }
+
+        // Add custom meta box
+        function scb_add_custom_meta_box() {
+            $screens = array(
+                'post',
+                'page'
+            );
+            foreach ($screens as $screen) {
+                add_meta_box(
+                    'scb_custom_meta_box',
+                    esc_html__('Simple Chat Button Settings', 'scb'),
+                    array($this, 'scb_custom_meta_box_callback'),
+                    $screen,
+                    'normal',
+                    'default'
+                );
+            }
+        }
+
+        // Custom meta box html
+        function scb_custom_meta_box_callback($post) {
+            // Check access
+            if (!current_user_can("manage_options") && !is_admin()) {
+                return;
+            }
+            // Include meta box html
+            include SCB_INC . 'meta-box.php';
+        }
+
+        // Save custom meta box data
+        function scb_save_post_data($post_id){
+            // Check plugin nonce is set
+            if (!isset($_POST['scb_settings_meta_box_nonce'])) {
+                return $post_id;
+            }
+
+            // Verify that the nonce is valid
+            $nonce = sanitize_text_field($_POST['scb_settings_meta_box_nonce']);
+            if (!wp_verify_nonce($nonce, 'scb_settings_meta_box')) {
+                return $post_id;
+            }
+
+            // Check auto save form
+            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+                return $post_id;
+            }
+
+            // Check the user permissions
+            if ('page' == $_POST['post_type']) {
+                if (!current_user_can('edit_page', $post_id)) {
+                    return $post_id;
+                }
+            } else {
+                if (!current_user_can('edit_post', $post_id)) {
+                    return $post_id;
+                }
+            }
+
+            // Sanitize the user input and save post meta
+            $button_hide_status = sanitize_text_field($_POST['scb_button_hide_status']);
+            if (!empty($button_hide_status)) {
+                update_post_meta($post_id, '_scb_button_hide_status', $button_hide_status);
+            } else {
+                delete_post_meta($post_id, '_scb_button_hide_status');
+            }
         }
 
         // Add settings link

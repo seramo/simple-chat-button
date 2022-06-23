@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Whatsapp Chat Button\n"
-"POT-Creation-Date: 2022-05-16 09:04+0430\n"
-"PO-Revision-Date: 2022-05-16 09:04+0430\n"
+"POT-Creation-Date: 2022-06-11 09:23+0430\n"
+"PO-Revision-Date: 2022-06-11 09:26+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -20,6 +20,10 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/meta-box.php:15
+msgid "Disable chat button on this page"
+msgstr "غیر فعال کردن دکمه چت در این صفحه"
 
 #: includes/settings-page.php:30
 msgid "Whatsapp Settings"
@@ -53,7 +57,7 @@ msgstr "متن چت واتساپ"
 msgid "(optional)"
 msgstr "(اختیاری)"
 
-#: includes/settings-page.php:48 simple-chat-button.php:86
+#: includes/settings-page.php:48 simple-chat-button.php:92
 msgid "Hello"
 msgstr "سلام"
 
@@ -69,7 +73,7 @@ msgstr "فعال کردن"
 msgid "Button text"
 msgstr "متن دکمه"
 
-#: includes/settings-page.php:62 simple-chat-button.php:88
+#: includes/settings-page.php:62 simple-chat-button.php:94
 msgid "Need Help?"
 msgstr "سوالی ندارید؟"
 
@@ -123,15 +127,19 @@ msgid "px (in Mobile)"
 msgstr "پیکسل (در موبایل)"
 
 #. Plugin Name of the plugin/theme
-#: simple-chat-button.php:52 simple-chat-button.php:53
+#: simple-chat-button.php:58 simple-chat-button.php:59
 msgid "Simple Chat Button"
 msgstr "دکمه ساده چت واتساپ"
 
-#: simple-chat-button.php:108
+#: simple-chat-button.php:121
+msgid "Simple Chat Button Settings"
+msgstr "تنظیمات دکمه ساده چت واتساپ"
+
+#: simple-chat-button.php:180
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: simple-chat-button.php:109
+#: simple-chat-button.php:181
 msgid "Website"
 msgstr "وبسایت سازنده"
 
@@ -146,6 +154,11 @@ msgstr "رسول موسویان"
 #. Author URI of the plugin/theme
 msgid "https://seramo.ir"
 msgstr "https://seramo.ir"
+
+#, fuzzy
+#~| msgid "Chat Button Settings"
+#~ msgid "WhatsApp Chat Button Settings"
+#~ msgstr "تنظیمات دکمه چت واتساپ"
 
 #~ msgid "+1xxxxxxx"
 #~ msgstr "+98xxxxxxx"

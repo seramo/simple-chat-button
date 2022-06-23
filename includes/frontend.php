@@ -6,8 +6,10 @@ if (!defined('ABSPATH')) {
 
 // Show whatsapp chat button in frontend
 function scb_show_whatsapp_button() {
+    $post_id = get_the_ID();
     $button_status = intval(get_option('scb_button_status'));
-    if ($button_status === 1 && !is_admin()){
+    $button_hide_status = intval(get_post_meta($post_id, '_scb_button_hide_status', true));
+    if ($button_status === 1 && $button_hide_status !== 1 && !is_admin()){
         // Initialize variables
         $whatsapp_number = get_option('scb_whatsapp_number');
         $whatsapp_chat_text = get_option('scb_whatsapp_chat_text');
