@@ -13,6 +13,7 @@ $scb_options = array(
     'scb_button_target',
 	'scb_button_position',
     'scb_button_z_index',
+    'scb_desktop_link_type',
 	'scb_desktop_bottom_margin',
 	'scb_tablet_bottom_margin',
 	'scb_mobile_bottom_margin'

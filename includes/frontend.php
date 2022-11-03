@@ -17,18 +17,24 @@ function scb_show_whatsapp_button() {
         $button_target = get_option('scb_button_target');
 		$button_position = get_option('scb_button_position');
         $button_z_index = intval(get_option('scb_button_z_index'));
+        $desktop_link_type = get_option('scb_desktop_link_type');
         $desktop_bottom_margin = intval(get_option('scb_desktop_bottom_margin'));
         $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
         $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
         $whatsapp_chat_text = urlencode($whatsapp_chat_text);
         $device_detection = (wp_is_mobile())?'mobile_and_tablet':'desktop';
+        $desktop_url = array(
+            'web' => 'https://web.whatsapp.com/send',
+            'api' => 'https://api.whatsapp.com/send',
+            'app' => 'whatsapp://send',
+        );
         $devices_url = array(
             'mobile_and_tablet' => 'whatsapp://send',
-            'desktop' => 'https://web.whatsapp.com/send'
+            'desktop' => $desktop_url[$desktop_link_type],
         );
         $chat_args = array(
             'phone' =>  $whatsapp_number,
-            'text'  =>  $whatsapp_chat_text
+            'text'  =>  $whatsapp_chat_text,
         );
         $chat_url = add_query_arg($chat_args, $devices_url[$device_detection]); ?>
 
@@ -136,7 +142,7 @@ function scb_show_whatsapp_button() {
             }
         </style>
         <div id="simple-chat-button--container">
-            <a id="simple-chat-button--button" href="<?php echo esc_attr($chat_url); ?>" target="<?php echo esc_attr($button_target); ?>"></a>
+            <a id="simple-chat-button--button" href="<?php echo esc_attr($chat_url); ?>" target="<?php echo esc_attr($button_target); ?>" rel="nofollow" aria-label="WhatsApp Chat Button" ></a>
             <span id="simple-chat-button--text"><?php echo esc_attr($button_text); ?></span>
         </div>
         <!-- END Simple Chat Button Plugin -->

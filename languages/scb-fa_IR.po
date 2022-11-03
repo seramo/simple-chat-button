@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Whatsapp Chat Button\n"
-"POT-Creation-Date: 2022-06-11 09:23+0430\n"
-"PO-Revision-Date: 2022-06-11 09:26+0430\n"
+"POT-Creation-Date: 2022-09-11 08:16+0430\n"
+"PO-Revision-Date: 2022-09-11 08:24+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Disable chat button on this page"
 msgstr "غیر فعال کردن دکمه چت در این صفحه"
 
-#: includes/settings-page.php:30
+#: includes/settings-page.php:31
 msgid "Whatsapp Settings"
 msgstr "تنظیمات واتساپ"
 
-#: includes/settings-page.php:31
+#: includes/settings-page.php:32
 msgid "Button Settings"
 msgstr "تنظیمات دکمه"
 
-#: includes/settings-page.php:39
+#: includes/settings-page.php:40
 msgid "Whatsapp number"
 msgstr "شماره واتساپ"
 
-#: includes/settings-page.php:41
+#: includes/settings-page.php:42
 msgid "15551234567"
 msgstr "989151234567"
 
-#: includes/settings-page.php:42
+#: includes/settings-page.php:43
 msgid ""
 "Enter Whatsapp number with country code (without any plus, preceding zero, "
 "hyphen, brackets, space)."
@@ -49,80 +49,96 @@ msgstr ""
 "شماره واتساپ را با کد کشور وارد کنید (بدون مثبت، صفرهای اول، خط تیره، براکت "
 "و فاصله)."
 
-#: includes/settings-page.php:46
+#: includes/settings-page.php:47
 msgid "Whatsapp chat text"
 msgstr "متن چت واتساپ"
 
-#: includes/settings-page.php:46 includes/settings-page.php:60
+#: includes/settings-page.php:47 includes/settings-page.php:61
 msgid "(optional)"
 msgstr "(اختیاری)"
 
-#: includes/settings-page.php:48 simple-chat-button.php:92
+#: includes/settings-page.php:49 simple-chat-button.php:93
 msgid "Hello"
 msgstr "سلام"
 
-#: includes/settings-page.php:53
+#: includes/settings-page.php:54
 msgid "Button status"
 msgstr "وضعیت دکمه"
 
-#: includes/settings-page.php:56
+#: includes/settings-page.php:57
 msgid "Enabled"
 msgstr "فعال کردن"
 
-#: includes/settings-page.php:60
+#: includes/settings-page.php:61
 msgid "Button text"
 msgstr "متن دکمه"
 
-#: includes/settings-page.php:62 simple-chat-button.php:94
+#: includes/settings-page.php:63 simple-chat-button.php:95
 msgid "Need Help?"
 msgstr "سوالی ندارید؟"
 
-#: includes/settings-page.php:63
+#: includes/settings-page.php:64
 msgid "Leave this field empty to only show an icon."
 msgstr ""
 "در صورتی که می خواهید متن دکمه نمایش داده نشود، این قسمت را خالی بگذارید."
 
-#: includes/settings-page.php:67
+#: includes/settings-page.php:68
+msgid "Desktop link type"
+msgstr "نوع لینک دسکتاپ"
+
+#: includes/settings-page.php:71
+msgid "WhatsApp Web"
+msgstr "نسخه وب"
+
+#: includes/settings-page.php:72
+msgid "WhatsApp Api"
+msgstr "API واتساپ"
+
+#: includes/settings-page.php:73
+msgid "Desktop App"
+msgstr "نسخه دسکتاپ"
+
+#: includes/settings-page.php:78
 msgid "Open link in"
 msgstr "نوع باز کردن لینک"
 
-#: includes/settings-page.php:70
+#: includes/settings-page.php:81
 msgid "New Tab"
 msgstr "تب جدید"
 
-#: includes/settings-page.php:71
+#: includes/settings-page.php:82
 msgid "Current Tab"
 msgstr "تب فعلی"
 
-#: includes/settings-page.php:76
+#: includes/settings-page.php:87
 msgid "Position"
 msgstr "موقعیت"
 
-#: includes/settings-page.php:79
+#: includes/settings-page.php:90
 msgid "Bottom Right"
 msgstr "پایین راست"
 
-#: includes/settings-page.php:80
+#: includes/settings-page.php:91
 msgid "Bottom Left"
 msgstr "پایین چپ"
 
-#: includes/settings-page.php:85
+#: includes/settings-page.php:96
 msgid "Z-index"
 msgstr "z-index"
 
-#: includes/settings-page.php:91
+#: includes/settings-page.php:102
 msgid "Bottom margin"
 msgstr "فاصله از پایین صفحه"
 
-#: includes/settings-page.php:93
+#: includes/settings-page.php:104
 msgid "px (in Desktop)"
 msgstr "پیکسل (در دسکتاپ)"
 
-#: includes/settings-page.php:99
+#: includes/settings-page.php:110
 msgid "px (in Tablet)"
 msgstr "پیکسل (در تبلت)"
 
-#: includes/settings-page.php:105
+#: includes/settings-page.php:116
 msgid "px (in Mobile)"
 msgstr "پیکسل (در موبایل)"
 
@@ -131,15 +147,15 @@ msgstr "پیکسل (در موبایل)"
 msgid "Simple Chat Button"
 msgstr "دکمه ساده چت واتساپ"
 
-#: simple-chat-button.php:121
+#: simple-chat-button.php:123
 msgid "Simple Chat Button Settings"
 msgstr "تنظیمات دکمه ساده چت واتساپ"
 
-#: simple-chat-button.php:180
+#: simple-chat-button.php:182
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: simple-chat-button.php:181
+#: simple-chat-button.php:183
 msgid "Website"
 msgstr "وبسایت سازنده"
 

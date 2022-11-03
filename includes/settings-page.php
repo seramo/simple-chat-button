@@ -19,6 +19,7 @@ $button_text = get_option('scb_button_text');
 $button_target = get_option('scb_button_target');
 $button_position = get_option('scb_button_position');
 $button_z_index = get_option('scb_button_z_index');
+$desktop_link_type = get_option('scb_desktop_link_type');
 $desktop_bottom_margin = intval(get_option('scb_desktop_bottom_margin'));
 $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
 $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
@@ -61,6 +62,16 @@ $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
                         <td>
                             <input type="text" name="scb_button_text" id="scb_button_text" placeholder="<?php echo esc_html__('Need Help?', 'scb'); ?>" value="<?php echo esc_attr($button_text);?>"/>
                             <p class="description"><?php echo esc_html__('Leave this field empty to only show an icon.', 'scb'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php echo esc_html__('Desktop link type', 'scb'); ?> :</th>
+                        <td>
+                            <select name="scb_desktop_link_type" id="scb_desktop_link_type" >
+                                <option <?php selected(esc_attr($desktop_link_type), 'web'); ?> value="web"><?php echo esc_html__('WhatsApp Web', 'scb'); ?></option>
+                                <option <?php selected(esc_attr($desktop_link_type), 'api'); ?> value="api"><?php echo esc_html__('WhatsApp Api', 'scb'); ?></option>
+                                <option <?php selected(esc_attr($desktop_link_type), 'app'); ?> value="app"><?php echo esc_html__('Desktop App', 'scb'); ?></option>
+                            </select>
                         </td>
                     </tr>
                     <tr>

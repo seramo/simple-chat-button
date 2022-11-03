@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Simple Whatsapp Chat Button\n"
-"POT-Creation-Date: 2022-05-16 09:05+0430\n"
+"POT-Creation-Date: 2022-09-11 08:16+0430\n"
 "PO-Revision-Date: 2021-08-13 19:43+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,114 +21,138 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/settings-page.php:30
-msgid "Whatsapp Settings"
+#: includes/meta-box.php:15
+msgid "Disable chat button on this page"
 msgstr ""
 
 #: includes/settings-page.php:31
+msgid "Whatsapp Settings"
+msgstr ""
+
+#: includes/settings-page.php:32
 msgid "Button Settings"
 msgstr ""
 
-#: includes/settings-page.php:39
+#: includes/settings-page.php:40
 msgid "Whatsapp number"
 msgstr ""
 
-#: includes/settings-page.php:41
+#: includes/settings-page.php:42
 msgid "15551234567"
 msgstr ""
 
-#: includes/settings-page.php:42
+#: includes/settings-page.php:43
 msgid ""
 "Enter Whatsapp number with country code (without any plus, preceding zero, "
 "hyphen, brackets, space)."
 msgstr ""
 
-#: includes/settings-page.php:46
+#: includes/settings-page.php:47
 msgid "Whatsapp chat text"
 msgstr ""
 
-#: includes/settings-page.php:46 includes/settings-page.php:60
+#: includes/settings-page.php:47 includes/settings-page.php:61
 msgid "(optional)"
 msgstr ""
 
-#: includes/settings-page.php:48 simple-chat-button.php:86
+#: includes/settings-page.php:49 simple-chat-button.php:93
 msgid "Hello"
 msgstr ""
 
-#: includes/settings-page.php:53
+#: includes/settings-page.php:54
 msgid "Button status"
 msgstr ""
 
-#: includes/settings-page.php:56
+#: includes/settings-page.php:57
 msgid "Enabled"
 msgstr ""
 
-#: includes/settings-page.php:60
+#: includes/settings-page.php:61
 msgid "Button text"
 msgstr ""
 
-#: includes/settings-page.php:62 simple-chat-button.php:88
+#: includes/settings-page.php:63 simple-chat-button.php:95
 msgid "Need Help?"
 msgstr ""
 
-#: includes/settings-page.php:63
+#: includes/settings-page.php:64
 msgid "Leave this field empty to only show an icon."
 msgstr ""
 
-#: includes/settings-page.php:67
-msgid "Open link in"
-msgstr ""
-
-#: includes/settings-page.php:70
-msgid "New Tab"
+#: includes/settings-page.php:68
+msgid "Desktop link type"
 msgstr ""
 
 #: includes/settings-page.php:71
+msgid "WhatsApp Web"
+msgstr ""
+
+#: includes/settings-page.php:72
+msgid "WhatsApp Api"
+msgstr ""
+
+#: includes/settings-page.php:73
+msgid "Desktop App"
+msgstr ""
+
+#: includes/settings-page.php:78
+msgid "Open link in"
+msgstr ""
+
+#: includes/settings-page.php:81
+msgid "New Tab"
+msgstr ""
+
+#: includes/settings-page.php:82
 msgid "Current Tab"
 msgstr ""
 
-#: includes/settings-page.php:76
+#: includes/settings-page.php:87
 msgid "Position"
 msgstr ""
 
-#: includes/settings-page.php:79
+#: includes/settings-page.php:90
 msgid "Bottom Right"
 msgstr ""
 
-#: includes/settings-page.php:80
+#: includes/settings-page.php:91
 msgid "Bottom Left"
 msgstr ""
 
-#: includes/settings-page.php:85
+#: includes/settings-page.php:96
 msgid "Z-index"
 msgstr ""
 
-#: includes/settings-page.php:91
+#: includes/settings-page.php:102
 msgid "Bottom margin"
 msgstr ""
 
-#: includes/settings-page.php:93
+#: includes/settings-page.php:104
 msgid "px (in Desktop)"
 msgstr ""
 
-#: includes/settings-page.php:99
+#: includes/settings-page.php:110
 msgid "px (in Tablet)"
 msgstr ""
 
-#: includes/settings-page.php:105
+#: includes/settings-page.php:116
 msgid "px (in Mobile)"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: simple-chat-button.php:52 simple-chat-button.php:53
+#: simple-chat-button.php:58 simple-chat-button.php:59
 msgid "Simple Chat Button"
 msgstr ""
 
-#: simple-chat-button.php:108
+#: simple-chat-button.php:123
+msgid "Simple Chat Button Settings"
+msgstr ""
+
+#: simple-chat-button.php:182
 msgid "Settings"
 msgstr ""
 
-#: simple-chat-button.php:109
+#: simple-chat-button.php:183
 msgid "Website"
 msgstr ""
 

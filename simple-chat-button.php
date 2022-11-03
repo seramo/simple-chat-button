@@ -4,7 +4,7 @@
  * Description: Adds a beautiful WhatsApp Sticky Button on the WordPress frontend.
  * Author:      Rasoul Mousavian
  * Author URI:  https://seramo.ir
- * Version:     1.4.0
+ * Version:     1.5.0
  * License:     GPLv2
  * Text Domain: scb
  * Domain Path: /languages/
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('SCB_VERSION', '1.4.0');
+define('SCB_VERSION', '1.5.0');
 define('SCB_NAME', plugin_basename(__FILE__));
 define('SCB_DIR', plugin_dir_path(__FILE__));
 define('SCB_URI', plugin_dir_url(__FILE__));
@@ -78,6 +78,7 @@ if (!class_exists('SCB_Main')) {
                 'scb_button_target',
                 'scb_button_position',
                 'scb_button_z_index',
+                'scb_desktop_link_type',
                 'scb_desktop_bottom_margin',
                 'scb_tablet_bottom_margin',
                 'scb_mobile_bottom_margin'
@@ -94,6 +95,7 @@ if (!class_exists('SCB_Main')) {
             add_option('scb_button_text', esc_html__('Need Help?', 'scb'));
             add_option('scb_button_target', '_blank');
             add_option('scb_button_position', 'right');
+            add_option('scb_desktop_link_type', 'web');
             add_option('scb_desktop_bottom_margin', '20');
             add_option('scb_tablet_bottom_margin', '20');
             add_option('scb_mobile_bottom_margin', '20');
@@ -113,7 +115,7 @@ if (!class_exists('SCB_Main')) {
         function scb_add_custom_meta_box() {
             $screens = array(
                 'post',
-                'page'
+                'page',
             );
             foreach ($screens as $screen) {
                 add_meta_box(
@@ -122,7 +124,7 @@ if (!class_exists('SCB_Main')) {
                     array($this, 'scb_custom_meta_box_callback'),
                     $screen,
                     'normal',
-                    'default'
+                    'default',
                 );
             }
         }
