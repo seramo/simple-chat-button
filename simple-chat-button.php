@@ -4,9 +4,9 @@
  * Description: Adds a beautiful WhatsApp Sticky Button on the WordPress frontend.
  * Author:      Rasoul Mousavian
  * Author URI:  https://seramo.ir
- * Version:     1.5.0
+ * Version:     1.6.0
  * License:     GPLv2
- * Text Domain: scb
+ * Text Domain: simple-chat-button
  * Domain Path: /languages/
  */
 
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('SCB_VERSION', '1.5.0');
+define('SCB_VERSION', '1.6.0');
 define('SCB_NAME', plugin_basename(__FILE__));
 define('SCB_DIR', plugin_dir_path(__FILE__));
 define('SCB_URI', plugin_dir_url(__FILE__));
@@ -48,15 +48,15 @@ if (!class_exists('SCB_Main')) {
             add_filter('plugin_action_links_' . SCB_NAME, array($this, 'scb_add_settings_link'));
 
             // Loads translated strings
-            load_plugin_textdomain('scb', false, dirname(SCB_NAME) . '/languages');
+            load_plugin_textdomain('simple-chat-button', false, dirname(SCB_NAME) . '/languages');
         }
 
         // Add setting page to options submenu
         function scb_settings_page() {
             add_submenu_page(
                 'options-general.php',
-                esc_html__('Simple Chat Button', 'scb'),
-                esc_html__('Simple Chat Button', 'scb'),
+                esc_html__('Simple Chat Button', 'simple-chat-button'),
+                esc_html__('Simple Chat Button', 'simple-chat-button'),
                 'manage_options',
                 'simple-chat-button',
                 array($this, 'scb_settings_page_callback')
@@ -90,9 +90,9 @@ if (!class_exists('SCB_Main')) {
                 register_setting('scb-button-settings', $option, $scb_settings_args);
             }
             // Initialize options
-            add_option('scb_whatsapp_chat_text', esc_html__('Hello', 'scb'));
+            add_option('scb_whatsapp_chat_text', esc_html__('Hello', 'simple-chat-button'));
             add_option('scb_button_status', '1');
-            add_option('scb_button_text', esc_html__('Need Help?', 'scb'));
+            add_option('scb_button_text', esc_html__('Need Help?', 'simple-chat-button'));
             add_option('scb_button_target', '_blank');
             add_option('scb_button_position', 'right');
             add_option('scb_desktop_link_type', 'web');
@@ -120,7 +120,7 @@ if (!class_exists('SCB_Main')) {
             foreach ($screens as $screen) {
                 add_meta_box(
                     'scb_custom_meta_box',
-                    esc_html__('Simple Chat Button Settings', 'scb'),
+                    esc_html__('Simple Chat Button Settings', 'simple-chat-button'),
                     array($this, 'scb_custom_meta_box_callback'),
                     $screen,
                     'normal',
@@ -179,8 +179,8 @@ if (!class_exists('SCB_Main')) {
 
         // Add settings link
         function scb_add_settings_link($links) {
-            $links[] = sprintf('<a href="%1$s">%2$s</a>', admin_url('options-general.php?page=simple-chat-button'), esc_html__('Settings', 'scb'));
-            $links[] = sprintf('<a href="https://seramo.ir">%1$s</a>', esc_html__('Website', 'scb'));
+            $links[] = sprintf('<a href="%1$s">%2$s</a>', admin_url('options-general.php?page=simple-chat-button'), esc_html__('Settings', 'simple-chat-button'));
+            $links[] = sprintf('<a href="https://seramo.ir">%1$s</a>', esc_html__('Website', 'simple-chat-button'));
             return $links;
         }
 

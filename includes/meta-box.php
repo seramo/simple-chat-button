@@ -12,6 +12,6 @@ $button_hide_status = get_post_meta($post_id, '_scb_button_hide_status', true);
 <p class="meta-options">
     <label for="scb_button_hide_status" class="selectit">
         <input name="scb_button_hide_status" type="checkbox" id="scb_button_hide_status" value="1" <?php checked('1', esc_attr($button_hide_status)); ?>>
-        <?php echo esc_html__('Disable chat button on this page', 'scb'); ?>
+        <?php echo esc_html__('Disable chat button on this page', 'simple-chat-button'); ?>
     </label>
 </p>
