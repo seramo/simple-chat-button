@@ -36,7 +36,9 @@ function scb_show_whatsapp_button() {
             'phone' =>  $whatsapp_number,
             'text'  =>  $whatsapp_chat_text,
         );
-        $chat_url = add_query_arg($chat_args, $devices_url[$device_detection]); ?>
+        $chat_url = add_query_arg($chat_args, $devices_url[$device_detection]);
+        ob_start('scb_html_minifier');
+        ?>
 
         <!-- BEGIN Simple Chat Button Plugin -->
         <style>
@@ -147,6 +149,8 @@ function scb_show_whatsapp_button() {
         </div>
         <!-- END Simple Chat Button Plugin -->
 
-    <?php }
+        <?php
+        ob_end_flush();
+    }
 }
 add_action('wp_footer', 'scb_show_whatsapp_button');
