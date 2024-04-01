@@ -68,8 +68,8 @@ $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
                         <th scope="row"><?php echo esc_html__('Desktop link type', 'simple-chat-button'); ?> :</th>
                         <td>
                             <select name="scb_desktop_link_type" id="scb_desktop_link_type" >
-                                <option <?php selected(esc_attr($desktop_link_type), 'web'); ?> value="web"><?php echo esc_html__('WhatsApp Web', 'simple-chat-button'); ?></option>
                                 <option <?php selected(esc_attr($desktop_link_type), 'api'); ?> value="api"><?php echo esc_html__('WhatsApp Api', 'simple-chat-button'); ?></option>
+                                <option <?php selected(esc_attr($desktop_link_type), 'web'); ?> value="web"><?php echo esc_html__('WhatsApp Web', 'simple-chat-button'); ?></option>
                                 <option <?php selected(esc_attr($desktop_link_type), 'app'); ?> value="app"><?php echo esc_html__('Desktop App', 'simple-chat-button'); ?></option>
                             </select>
                         </td>

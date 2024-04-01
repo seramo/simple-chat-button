@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Simple Whatsapp Chat Button\n"
-"POT-Creation-Date: 2022-09-11 08:16+0430\n"
-"PO-Revision-Date: 2022-09-11 08:24+0430\n"
+"POT-Creation-Date: 2024-04-01 18:10+0330\n"
+"PO-Revision-Date: 2024-04-01 18:10+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: simple-chat-button.php\n"
@@ -57,7 +57,7 @@ msgstr "متن چت واتساپ"
 msgid "(optional)"
 msgstr "(اختیاری)"
 
-#: includes/settings-page.php:49 simple-chat-button.php:93
+#: includes/settings-page.php:49 simple-chat-button.php:94
 msgid "Hello"
 msgstr "سلام"
 
@@ -73,7 +73,7 @@ msgstr "فعال کردن"
 msgid "Button text"
 msgstr "متن دکمه"
 
-#: includes/settings-page.php:63 simple-chat-button.php:95
+#: includes/settings-page.php:63 simple-chat-button.php:96
 msgid "Need Help?"
 msgstr "سوالی ندارید؟"
 
@@ -143,19 +143,19 @@ msgid "px (in Mobile)"
 msgstr "پیکسل (در موبایل)"
 
 #. Plugin Name of the plugin/theme
-#: simple-chat-button.php:58 simple-chat-button.php:59
+#: simple-chat-button.php:59 simple-chat-button.php:60
 msgid "Simple Chat Button"
 msgstr "دکمه ساده چت واتساپ"
 
-#: simple-chat-button.php:123
+#: simple-chat-button.php:124
 msgid "Simple Chat Button Settings"
 msgstr "تنظیمات دکمه ساده چت واتساپ"
 
-#: simple-chat-button.php:182
+#: simple-chat-button.php:183
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: simple-chat-button.php:183
+#: simple-chat-button.php:184
 msgid "Website"
 msgstr "وبسایت سازنده"
 
