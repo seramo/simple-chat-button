@@ -128,11 +128,11 @@ If you like this plugin and is useful for you, please support us by giving [5 st
 * Fixed: issue in margin inputs
 
 = 1.2 =
-* Fix: chat link bug in desktop mode (for iranian users)
+* Fixed: chat link bug in desktop mode (for iranian users)
 
 = 1.1 =
-* Fix: chat link bug in desktop mode
-* Fix: display chat button in widgets editor
+* Fixed: chat link bug in desktop mode
+* Fixed: display chat button in widgets editor
 
 = 1.0 =
 * Initial Release
