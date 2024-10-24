@@ -1,7 +1,7 @@
 === Simple Chat Button ===
 Contributors: seramo
 Donate link: https://seramo.ir
-Tags: WhatsApp Sticky Button, Simple WhatsApp Chat Button, Chat Button, WhatsApp Button, Whatsapp Chat, Whatsapp Business, Simple, WhatsApp, Chat, Button
+Tags: whatsapp, whatsapp business, chat, whatsapp chat, woocommerce whatsapp
 Requires at least: 3.7
 Tested up to: 6.6
 Stable tag: 1.9.0
