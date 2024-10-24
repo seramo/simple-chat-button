@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
 // Get the active tab from the $_GET parameter
 $default_tab = 'whatsapp-settings';
-$tab = isset($_GET['tab'])?sanitize_text_field($_GET['tab']):$default_tab;
+$tab = isset($_GET['tab'])?sanitize_text_field(wp_unslash($_GET['tab'])):$default_tab;
 $settings_url = "options-general.php?page=simple-chat-button";
 $whatsapp_settings_url = admin_url($settings_url.'&tab=whatsapp-settings');
 $button_settings_url = admin_url($settings_url.'&tab=button-settings');
@@ -35,7 +35,7 @@ $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
         <form method="post" action="options.php">
             <?php ($tab==='whatsapp-settings')?settings_fields('scb-whatsapp-settings'):settings_fields('scb-button-settings'); ?>
             <table class="form-table">
-                <?php if ($tab==='whatsapp-settings' || $tab!=='button-settings') { ?>
+                <?php if ($tab==='whatsapp-settings') { ?>
                     <tr>
                         <th scope="row"><?php echo esc_html__('Whatsapp number', 'simple-chat-button'); ?> :</th>
                         <td>
@@ -49,7 +49,7 @@ $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
                             <input type="text" name="scb_whatsapp_chat_text" id="scb_whatsapp_chat_text" placeholder="<?php echo esc_html__('Hello', 'simple-chat-button'); ?>" value="<?php echo esc_attr($whatsapp_chat_text);?>"/>
                         </td>
                     </tr>
-                <?php } elseif ($tab==='button-settings') { ?>
+                <?php } else { ?>
                     <tr>
                         <th scope="row"><?php echo esc_html__('Button status', 'simple-chat-button'); ?> :</th>
                         <td>

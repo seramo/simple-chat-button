@@ -3,8 +3,8 @@ Contributors: seramo
 Donate link: https://seramo.ir
 Tags: WhatsApp Sticky Button, Simple WhatsApp Chat Button, Chat Button, WhatsApp Button, Whatsapp Chat, Whatsapp Business, Simple, WhatsApp, Chat, Button
 Requires at least: 3.7
-Tested up to: 6.5
-Stable tag: 1.8.0
+Tested up to: 6.6
+Stable tag: 1.9.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -102,6 +102,9 @@ If you like this plugin and is useful for you, please support us by giving [5 st
 6. screenshot-6.png - Whatsapp Button without text box (Bottom Right position)
 
 == Changelog ==
+
+= 1.9 =
+* Refactor: improved sanitization
 
 = 1.8 =
 * Fixed: translation problem

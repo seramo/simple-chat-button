@@ -4,7 +4,7 @@
  * Description: Adds a beautiful WhatsApp Sticky Button on the WordPress frontend.
  * Author:      Rasoul Mousavian
  * Author URI:  https://seramo.ir
- * Version:     1.8.0
+ * Version:     1.9.0
  * License:     GPLv2
  * Text Domain: simple-chat-button
  * Domain Path: /languages/
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('SCB_VERSION', '1.8.0');
+define('SCB_VERSION', '1.9.0');
 define('SCB_NAME', plugin_basename(__FILE__));
 define('SCB_DIR', plugin_dir_path(__FILE__));
 define('SCB_URI', plugin_dir_url(__FILE__));
@@ -43,7 +43,7 @@ if (!class_exists('SCB_Main')) {
             add_action('add_meta_boxes', array($this,'scb_add_custom_meta_box'));
 
             // Add save custom meta box data
-            add_action('save_post', array($this, 'scb_save_post_data'));
+            add_action('save_post', array($this, 'scb_save_post_data'), 10, 2);
 
             // Add settings link
             add_filter('plugin_action_links_' . SCB_NAME, array($this, 'scb_add_settings_link'));
@@ -141,7 +141,7 @@ if (!class_exists('SCB_Main')) {
         }
 
         // Save custom meta box data
-        function scb_save_post_data($post_id){
+        function scb_save_post_data($post_id, $post){
             // Check plugin nonce is set
             if (!isset($_POST['scb_settings_meta_box_nonce'])) {
                 return $post_id;
@@ -159,18 +159,13 @@ if (!class_exists('SCB_Main')) {
             }
 
             // Check the user permissions
-            if ('page' == $_POST['post_type']) {
-                if (!current_user_can('edit_page', $post_id)) {
-                    return $post_id;
-                }
-            } else {
-                if (!current_user_can('edit_post', $post_id)) {
-                    return $post_id;
-                }
+            $permission = ($post->post_type == 'page') ? 'edit_page' : 'edit_post';
+            if (!current_user_can($permission, $post_id)) {
+                return $post_id;
             }
 
             // Sanitize the user input and save post meta
-            $button_hide_status = sanitize_text_field($_POST['scb_button_hide_status']);
+            $button_hide_status = isset($_POST['scb_button_hide_status']) ? sanitize_text_field($_POST['scb_button_hide_status']) : '';
             if (!empty($button_hide_status)) {
                 update_post_meta($post_id, '_scb_button_hide_status', $button_hide_status);
             } else {
