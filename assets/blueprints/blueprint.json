@@ -1,0 +1,7 @@
+{
+  "landingPage": "/wp-admin/options-general.php?page=simple-chat-button",
+  "preferredVersions": {
+    "php": "8.0",
+    "wp": "6.6"
+  }
+}
