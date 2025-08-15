@@ -25,7 +25,7 @@ $desktop_bottom_margin = intval(get_option('scb_desktop_bottom_margin'));
 $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
 $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
 
-$wanotifier_url = 'https://link.seramo.ir/wan';
+$wanotifier_url = 'https://wanotifier.com/?ref=991';
 ?>
 
 <div class="wrap">
