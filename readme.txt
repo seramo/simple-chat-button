@@ -17,7 +17,7 @@ WhatsApp Chat Button (Simple Chat Button) is the Fastest (No use JavaScript), Li
 
 After clicking on the WhatsApp Sticky Button, It will bring you to the WhatsApp application.
 
-[Demo](https://wordpress.org/plugins/simple-chat-button/?preview=1)
+[Live Demo](https://wordpress.org/plugins/simple-chat-button/?preview=1)
 
 == WhatsApp Chat ==
 
