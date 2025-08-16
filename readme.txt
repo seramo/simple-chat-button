@@ -13,7 +13,7 @@ WhatsApp Chat Button - Display the beautiful WhatsApp Sticky Button on the WordP
 
 == Description ==
 
-WhatsApp Chat Button ( Simple Chat Button ) is the Fastest (No use JavaScript), Lightweight and Very Simple WordPress plugin that displays the beautiful WhatsApp Sticky Button on the WordPress frontend.
+WhatsApp Chat Button (Simple Chat Button) is the Fastest (No use JavaScript), Lightweight and Very Simple WordPress plugin that displays the beautiful WhatsApp Sticky Button on the WordPress frontend.
 
 After clicking on the WhatsApp Sticky Button, It will bring you to the WhatsApp application.
 
