@@ -4,7 +4,7 @@
  * Description: Adds a beautiful WhatsApp Sticky Button on the WordPress frontend.
  * Author:      Rasoul Mousavian
  * Author URI:  https://seramo.ir
- * Version:     1.9.1
+ * Version:     1.9.2
  * License:     GPLv2
  * Text Domain: simple-chat-button
  * Domain Path: /languages/
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('SCB_VER', '1.9.1');
+define('SCB_VER', '1.9.2');
 define('SCB_NAME', plugin_basename(__FILE__));
 define('SCB_DIR', plugin_dir_path(__FILE__));
 define('SCB_URI', plugin_dir_url(__FILE__));

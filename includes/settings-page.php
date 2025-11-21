@@ -10,7 +10,6 @@ $tab = isset($_GET['tab'])?sanitize_text_field(wp_unslash($_GET['tab'])):$defaul
 $settings_url = "options-general.php?page=simple-chat-button";
 $whatsapp_settings_url = admin_url($settings_url.'&tab=whatsapp-settings');
 $button_settings_url = admin_url($settings_url.'&tab=button-settings');
-$whatsapp_automation_url = admin_url($settings_url.'&tab=whatsapp-automation');
 
 // Initialize variables
 $whatsapp_number = get_option('scb_whatsapp_number');
@@ -24,8 +23,6 @@ $desktop_link_type = get_option('scb_desktop_link_type');
 $desktop_bottom_margin = intval(get_option('scb_desktop_bottom_margin'));
 $tablet_bottom_margin = intval(get_option('scb_tablet_bottom_margin'));
 $mobile_bottom_margin = intval(get_option('scb_mobile_bottom_margin'));
-
-$wanotifier_url = 'https://wanotifier.com/?ref=991';
 ?>
 
 <div class="wrap">
@@ -33,7 +30,6 @@ $wanotifier_url = 'https://wanotifier.com/?ref=991';
     <nav class="nav-tab-wrapper">
         <a href="<?php echo esc_url($whatsapp_settings_url); ?>" class="nav-tab <?php echo ($tab==='whatsapp-settings')?'nav-tab-active':''; ?>"><?php echo esc_html__('Whatsapp Settings', 'simple-chat-button'); ?></a>
         <a href="<?php echo esc_url($button_settings_url); ?>" class="nav-tab <?php echo ($tab==='button-settings')?'nav-tab-active':''; ?>"><?php echo esc_html__('Button Settings', 'simple-chat-button'); ?></a>
-        <a href="<?php echo esc_url($whatsapp_automation_url); ?>" class="nav-tab <?php echo ($tab==='whatsapp-automation')?'nav-tab-active':''; ?>"><?php echo esc_html__('WhatsApp Automation', 'simple-chat-button'); ?></a>
     </nav>
     <div class="tab-content">
         <form method="post" action="options.php">
@@ -120,42 +116,9 @@ $wanotifier_url = 'https://wanotifier.com/?ref=991';
                             <input type="number" name="scb_mobile_bottom_margin" id="scb_mobile_bottom_margin" min="0" max="100" step="1" value="<?php echo esc_attr($mobile_bottom_margin) ?>"/><span> <?php echo esc_html__('px (in Mobile)', 'simple-chat-button'); ?> </span>
                         </td>
                     </tr>
-                <?php } elseif ($tab==='whatsapp-automation') { ?>
-                    <div class="card" style="max-width:820px">
-                        <h2><?php echo esc_html__('WhatsApp Automation', 'simple-chat-button'); ?></h2>
-                        <p style="font-size:14px;line-height:1.6;">
-                            <?php echo esc_html__('Still replying to WhatsApp chats manually? Upgrade your phone number to WhatsApp Business API and put it on autopilot.', 'simple-chat-button'); ?>
-                        </p>
-
-                        <p style="font-weight:600;margin-bottom:10px;">
-                            <?php echo esc_html__('Create your account with WANotifier to get free access to the official WhatsApp Business API and:', 'simple-chat-button'); ?>
-                        </p>
-
-                        <ul style="list-style:disc;padding-left:20px;margin-top:0;">
-                            <li><?php echo esc_html__('Send automated greetings and out-of-office replies', 'simple-chat-button'); ?></li>
-                            <li><?php echo esc_html__('Create smart auto-responses for common questions', 'simple-chat-button'); ?></li>
-                            <li><?php echo esc_html__('Setup and run a chatbot to handle FAQs 24/7', 'simple-chat-button'); ?></li>
-                            <li><?php echo esc_html__('Capture leads in one place and send broadcasts later', 'simple-chat-button'); ?></li>
-                            <li><?php echo esc_html__('And much more, without the need to stay online', 'simple-chat-button'); ?></li>
-                        </ul>
-
-                        <p>
-                            <a class="button button-primary button-hero" href="<?php echo esc_url($wanotifier_url); ?>" target="_blank" rel="noopener noreferrer">
-                                <?php echo esc_html__('Get Started for Free', 'simple-chat-button'); ?>
-                            </a>
-                        </p>
-
-                        <p class="description" style="margin-top:10px;">
-                            <em><?php echo esc_html__('When you sign up using the link above and later choose to upgrade, we earn a small commission at no extra cost to you — helping us support the development and maintenance of this plugin.', 'simple-chat-button'); ?></em>
-                        </p>
-                    </div>
                 <?php } ?>
             </table>
-            <?php
-            if ($tab !== 'whatsapp-automation') {
-                submit_button();
-            }
-            ?>
+            <?php submit_button(); ?>
         </form>
     </div>
 </div>
