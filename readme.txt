@@ -3,7 +3,7 @@ Contributors: seramo
 Donate link: https://seramo.ir
 Tags: whatsapp, whatsapp business, whatsapp chat, woocommerce whatsapp, chat
 Requires at least: 3.7
-Tested up to: 6.8.3
+Tested up to: 6.9
 Stable tag: 1.9.2
 Requires PHP: 5.6
 License: GPLv2 or later
